@@ -26,7 +26,7 @@ describe("Inventory - Products", () => {
     cy.get('[data-test="shopping-cart-badge"]').should('not.exist');
   });
 
-  it.only("Should select some products, go to cart, and go back to continue shopping", () => {
+  it("Should select some products, go to cart, and go back to continue shopping", () => {
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').should('be.visible').click();
     cy.get('[data-test="shopping-cart-badge"]').should('be.visible').and('contain', '1');
     cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').should('be.visible').click();
